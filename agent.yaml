@@ -1,0 +1,31 @@
+name: LangGraph Groq Summarizer Agent
+version: "1.0.0"
+
+description: >
+  LangGraph based AI summarizer agent using Groq LLM.
+
+entrypoint: main.py
+
+framework: langgraph
+
+runtime:
+  python: "3.10"
+
+permissions:
+  - internet
+
+input:
+  type: text
+
+output:
+  type: json
+
+activation_type: manual
+
+authentication:
+  - api_key
+
+required_api_keys:
+  - GROQ_API_KEY
+
+risk_level: low
